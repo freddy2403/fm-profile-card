@@ -32,10 +32,15 @@ body {
 }
 
 .card {
-  background-color: white;
   width: 350px;
   height: 350px;
-  border-radius: 30px;
+  max-width: 100%;
+  border-radius: 10px;
+  background: url(images/bg-pattern-card.svg) no-repeat;
+  background-color: white;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h2 {
@@ -52,17 +57,6 @@ body {
 
 .card_header {
   height: 140px;
-  width: 350px;
-}
-
-.card_header img {
-  border-radius: 30px 30px 0px 0px;
-}
-
-.card_content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 .profile_pic {
@@ -70,14 +64,22 @@ body {
   background-color: #FFF;
   border: 5px solid #FFF;
   object-fit: cover;
-  transform: translateY(-50%);
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.card_content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card_socialstats {
   margin: 5%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
 }
 
 .footer-item {
@@ -86,4 +88,8 @@ body {
 
 .footer-item p {
   font-size: 11px;
+}
+
+hr {
+  border: 0.2px solid rgba(0,0,0,0.1);
 }
